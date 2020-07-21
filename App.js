@@ -50,24 +50,26 @@ export default function App() {
     return (<View style={styles.container}>
       <Text>Points : {points}</Text>
       <Text>Vie(s) : {hp}</Text>
-      <Text>{msgRound}</Text>
-      <Text>{questions[round].question}</Text>
-      <Button
-        title="True"
-        color={greenColor}
-        onPress={() => checkResponse(questions[round], true)} />
-      <Button
-        title="False"
-        color={redColor}
-        onPress={() => checkResponse(questions[round], false)} />
-      <Text>Round : {round}</Text>
+      <Text style={styles.textRound}>{msgRound}</Text>
+      <Text style={styles.questions}>{questions[round].question}</Text>
       <Text>{complementary}</Text>
+      <View>
+        <Button
+          title="True"
+          color={greenColor}
+          onPress={() => checkResponse(questions[round], true)} />
+        <Button
+          title="False"
+          color={redColor}
+          onPress={() => checkResponse(questions[round], false)} />
+      </View>
+      
     </View>)
   }
 
   function NextButton(props) {
     if (hideButtonNext == false) {
-      return (<View>
+      return (<View style = {styles.nextButton}>
         <Button 
           title="Next" 
           color={blueColor}
@@ -80,8 +82,8 @@ export default function App() {
   }
 
   return (
-  <View style={styles.container}>
-    <Quizz/>
+  <View>
+    <Quizz style={styles.container}/>
     <NextButton/>
   </View>);
 }
@@ -92,10 +94,25 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: 50
   },
-  button: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between'
+  textRound: {
+    fontWeight: "Bold",
+    fontSize: 40,
+    marginTop: 15,
+    marginBottom: 15
+  },
+  questions: {
+    fontWeight: "bold",
+    fontSize: 30,
+    textAlign: "center",
+    marginLeft: 10,
+    marginRight: 10,
+    marginBottom: 20
+  },
+  nextButton: {
+    marginTop: 30,
+    marginRight: 15,
+    marginLeft: 15
   }
 });
