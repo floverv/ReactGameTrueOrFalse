@@ -3,35 +3,35 @@
         "question" : "Paris est la capitale de la France ?",
         "response" : true,
         "complementary" : "Paris devient la capitale de la France pour la première fois en 508 et jusqu'en 768.", 
-        "theme" : "capitale",
-        "difficulty" : "easy" 
+        "theme" : 4,
+        "difficulty" : 1 
     },
     { 
         "question" : "Le serpent est un reptile ?",
         "response" : true,
         "complementary" : "Le serpent fait bien partie de la catégorie des reptiles",
-        "theme" : "animal",
-        "difficulty" : "easy"
+        "theme" : 3,
+        "difficulty" : 1
     },
     { 
         "question" : "Le maroille est une invention de l'Italie ?",
         "response" : false,
         "complementary" : "Le maroille vient de France dans la région de la Picardie",
-        "theme" : "food",
-        "difficulty" : "normal" 
+        "theme" : 1,
+        "difficulty" : 2 
     },
     { 
         "question" : "Vladimir Poutine est le président de la Russie",
         "response" : true,
         "complementary" : "Vladimir Poutine est le président de la Russie",
-        "theme" : "politic",
-        "difficulty" : "normal"
+        "theme" : 2,
+        "difficulty" : 2
     },
     { 
         "question" : "Le chien est nyctalope ?",
         "response" : false,
         "complementary" : "Le chien n'est pas nyctalope, car il ne voit pas dans le noir",
-        "theme" : "animal",
-        "difficulty" : "hard"
+        "theme" : 3,
+        "difficulty" : 3
     }
 ]
